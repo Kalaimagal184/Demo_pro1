@@ -68,7 +68,7 @@ The project includes four visual insights:
 
 Distribution of House Prices
 
-![LinkedIn Dashboard](/1 (5).png)
+![LinkedIn Dashboard](C:/Users/CR2/Pictures/images/1 (5).png)
 
 Correlation Heatmap
 
