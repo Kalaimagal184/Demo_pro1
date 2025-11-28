@@ -2,108 +2,161 @@
 
 🏡 House Price Prediction – Machine Learning Project
 
-This project builds a house price prediction model using machine learning techniques in Python. It includes data preprocessing, feature engineering, model training, and visualizations to understand patterns in housing prices.
+A complete end-to-end machine learning pipeline for predicting house prices using structured data.
+This project preprocesses numeric & categorical features, trains a regression model, evaluates performance, and generates visual insights.
 
-📁 Project Structure House Price Prediction Project │ ├── House_Price_India.csv # Dataset used for training and evaluation ├── House price prediction project.docx # Original project write-up └── README.md # Project documentation
+📌 Table of Contents
 
-📌 Objective
+Overview
 
-The goal is to develop a machine learning model that predicts house prices based on various numerical and categorical features. A Linear Regression model is fitted as part of a preprocessing + modeling pipeline.
+Features
 
-🧰 Technologies & Libraries Used
+Dataset
 
-Python
+ML Pipeline
 
-Pandas, NumPy – Data processing
+Visualizations
 
-Scikit-Learn – ML preprocessing, model training, splitting, metrics
+Project Structure
 
-Matplotlib, Seaborn – Visualizations
+Installation
 
-📊 Workflow Overview 1️⃣ Load Dataset
+How to Run
 
-The dataset House_Price_India.csv is loaded and inspected using:
+Results
 
-df.head()
+Future Improvements
 
-df.info()
+License
 
-2️⃣ Feature Selection
+📘 Overview
+
+This project implements a Linear Regression model wrapped inside a Scikit-Learn pipeline.
+It automatically preprocesses data using:
+
+StandardScaler for numeric features
+
+OneHotEncoder for categorical features
+
+The model is then trained and evaluated using RMSE and R² Score.
+Several plots are generated to analyze price distribution and model performance.
+
+⭐ Features
+
+✔️ Automated preprocessing (scaling + encoding)
+✔️ Train/test split for evaluation
+✔️ Linear Regression model
+✔️ Model performance metrics
+✔️ Multiple visualizations
+✔️ Fully reproducible workflow
+
+📊 Dataset
+
+The dataset used is:
+
+House_Price_India.csv
+
 
 Target variable: Price
+Inputs: Mixture of numeric and categorical housing attributes.
 
-Features are split into:
+🧠 ML Pipeline
 
-Numeric features
+The pipeline consists of:
 
-Categorical features
+ColumnTransformer
 
-3️⃣ Preprocessing
+Numeric → StandardScaler
 
-A ColumnTransformer is used to prepare the inputs:
+Categorical → OneHotEncoder
 
-Feature Type Transformation Numeric StandardScaler Categorical OneHotEncoder 4️⃣ Model Pipeline
+Model
 
-A full pipeline is built:
+Linear Regression
 
-Preprocessor → Linear Regression
+Train/Test Split
 
-5️⃣ Train/Test Split
+80% training
 
-Performed using: train_test_split(test_size=0.2, random_state=42)
+20% testing
 
-6️⃣ Model Training
+Metrics
 
-model.fit(X_train, y_train)
-
-7️⃣ Evaluation Metrics
-
-RMSE (Root Mean Squared Error)
+RMSE
 
 R² Score
 
-8️⃣ Visualizations
+🖼️ Visualizations
 
-The project includes four visual insights:
+Save your generated plot images inside an images/ folder.
+Here is how they will appear in the README:
 
-Distribution of House Prices
+📌 1. Distribution of House Prices
 
-![LinkedIn Dashboard](C:/Users/CR2/Pictures/images/1 (5).png)
+📌 2. Correlation Heatmap
 
-Correlation Heatmap
+📌 3. Actual vs Predicted Prices
 
-Actual vs. Predicted Prices Scatterplot
+📌 4. Residual Plot
 
-Residual Plot
+📁 Project Structure
+House Price Prediction Project
+│
+├── images/
+│   ├── price_distribution.png
+│   ├── correlation_heatmap.png
+│   ├── actual_vs_predicted.png
+│   └── residual_plot.png
+│
+├── House_Price_India.csv
+├── house_price_prediction.py       # (optional) Python script version
+└── README.md
 
-These help evaluate model performance and understand the data.
+⚙️ Installation
 
-📈 Example Output (Based on Code)
-
-RMSE value (model error magnitude)
-
-R² Score (model goodness-of-fit)
-
-Visualization plots for deeper analysis
-
-🚀 How to Run the Project
-
-Install dependencies:
+Install dependencies with:
 
 pip install pandas numpy scikit-learn matplotlib seaborn
 
-Place House_Price_India.csv in your working directory
+▶️ How to Run
 
-Run the script in your Python environment (Jupyter/Colab/VSCode/etc.)
+Place the dataset House_Price_India.csv in the project folder.
+
+Run the script:
+
+python house_price_prediction.py
+
+
+—or paste the code into a Jupyter Notebook or Google Colab cell.
+
+📈 Results
+
+After training the model, the script prints:
+
+RMSE – Indicates prediction error
+
+R² Score – Indicates goodness of fit
+
+Example:
+
+RMSE: <value>
+R² Score: <value>
+
+
+Visualizations further help evaluate performance:
+
+Price distribution
+
+Feature correlations
+
+Actual vs predicted values
+
+Residual behavior
 
 🔮 Future Improvements
 
-Try alternative models (Random Forest, XGBoost)
-
-Hyperparameter tuning
-
-Feature importance analysis
-
-Outlier detection and handling
-
-Improve visualizations for deeper insights
+🚀 Try more advanced models (Random Forest, XGBoost, LightGBM)
+⚙️ Add hyperparameter tuning
+📉 Handle outliers
+🧩 Add feature engineering
+🏗️ Deploy model using Flask/Streamlit
