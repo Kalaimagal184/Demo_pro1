@@ -67,7 +67,7 @@ R² Score
 The project includes four visual insights:
 
 Distribution of House Prices
-![LinkedIn Dashboard]("C:\Users\CR2\Pictures\images\1 (5).png")
+![LinkedIn Dashboard](/Screenshot 2025-11-21 150943.png)
 Correlation Heatmap
 
 Actual vs. Predicted Prices Scatterplot
