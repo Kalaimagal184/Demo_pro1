@@ -146,7 +146,7 @@ R² Score: <value>
 Visualizations further help evaluate performance:
 
 Price distribution
-![LinkedIn Dashboard](/images/1 (1).png)
+![LinkedIn Dashboard](/images/1_(5).png)
 
 Feature correlations
 
